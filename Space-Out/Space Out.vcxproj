@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3A0101A-682E-42F6-A61C-7294F3934E77}</ProjectGuid>
+    <RootNamespace>SpaceOut</RootNamespace>
+    <ProjectName />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;msimg32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AlienSprite.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SpaceOut.h" />
+    <ClInclude Include="Sprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SpaceOut.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Blobbo.bmp" />
+    <Image Include="BMissile.bmp" />
+    <Image Include="Car.bmp" />
+    <Image Include="Desert.bmp" />
+    <Image Include="GameOver.bmp" />
+    <Image Include="Jelly.bmp" />
+    <Image Include="JMissile.bmp" />
+    <Image Include="LgExplosion.bmp" />
+    <Image Include="Missile.bmp" />
+    <Image Include="SmCar.bmp" />
+    <Image Include="SmExplosion.bmp" />
+    <Image Include="SpaceOut.ico" />
+    <Image Include="SpaceOut_sm.ico" />
+    <Image Include="Splash.bmp" />
+    <Image Include="Timmy.bmp" />
+    <Image Include="TMissile.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="BMissile.wav" />
+    <Media Include="GameOver.wav" />
+    <Media Include="JMissile.wav" />
+    <Media Include="LgExplode.wav" />
+    <Media Include="Missile.wav" />
+    <Media Include="SmExplode.wav" />
+    <Media Include="TMissile.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlienSprite.cpp" />
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="SpaceOut.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
